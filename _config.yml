@@ -5,14 +5,14 @@ menu:
   Tags: /tags
   Categories: /categories
   Github:
-    url: https://github.com/klugjo/hexo-theme-clean-blog
+    url: https://github.com/junyussh
     icon: github
 
 # Title on top left of menu. Leave empty to use main blog title
-menu_title: Configurable Title
+menu_title: 書術方隅
 
 # URL of the Home page image
-index_cover: http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg
+index_cover: https://images.unsplash.com/photo-1507830075634-ce51e8b19328?ixlib=rb-0.3.5&s=fc5eb149332b3aa72b998b47a87ec871&auto=format&fit=crop&w=1650&q=80
 
 # Default post title
 default_post_title: Untitled
@@ -20,7 +20,7 @@ default_post_title: Untitled
 # Comments. Choose one by filling up the information
 comments:
   # Disqus comments
-  disqus_shortname:
+  disqus_shortname: tech-notes-shelf
   # Facebook comments
   facebook:
     appid:
@@ -28,7 +28,7 @@ comments:
     comment_colorscheme: light
 
 # Google Analytics Tracking ID
-google_analytics:
+google_analytics: UA-110952206-1
 
 # Addthis ID
 addthis:
@@ -40,7 +40,7 @@ favicon:
 twitter_url:
 twitter_handle:
 facebook_url:
-github_url: https://github.com/klugjo/hexo-theme-clean-blog
+github_url: https://github.com/junyussh
 gitlab_url:
 linkedin_url:
 mailto:

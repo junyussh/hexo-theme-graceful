@@ -16,7 +16,13 @@ p, li
 
 h1, h2, h3, h4, h5, h6
   @extend .sans-serif
-  font-weight 800
+  font-weight 700
+
+article
+  word-wrap: break-word
+  img
+    margin: 1em auto;
+    display: block !important;
 
 a
   color gray-dark
@@ -40,13 +46,13 @@ hr.small
   z-index 3
   @extend .sans-serif
   .navbar-brand
-    font-weight 800
+    font-weight 700
   .nav
     li
       a
         text-transform uppercase
         font-size 12px
-        font-weight 800
+        font-weight 700
         letter-spacing 1px
         text-decoration none
   @media only screen and (min-width: 768px)
@@ -157,6 +163,10 @@ hr.small
         font-size 30px
 
 .post-preview
+  img
+    display: block;
+    max-width: 100%;
+    margin: 1em auto;
   > a
     color gray-dark
     &:hover, &:focus
@@ -204,8 +214,56 @@ hr.small
   display block
   border-bottom-right-radius 5px
   border-bottom-left-radius 5px
-
-.post-tags, .post-categories
+.post-more-link
+  display: inline-block;
+  float: right;
+  line-height: 1em;
+  padding: 6px 15px;
+  border-radius: 15px;
+  background: #eee;
+  color: #999;
+  text-shadow: 0 1px #fff;
+  text-decoration: none !important;
+  &:hover
+    background: #258fb8;
+    color: #fff !important;
+    text-decoration: none;
+    text-shadow: 0 1px #1e7293;
+.tags
+  a
+    &:hover
+      background-color: rgba(255,255,255,.4);
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 999em;
+    padding: 0 10px;
+    color: white;
+    border-color: white;
+    line-height: 24px;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 1px;
+    margin-bottom: 6px;
+.post-tags
+  font-size 15px
+  margin-top 30px
+  margin-bottom 30px
+  a
+    &:hover
+      color: #0085a1;
+      border-color: #0085a1;
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 999em;
+    padding: 0 10px;
+    color: gray;
+    border-color: gray;
+    line-height: 24px;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 1px;
+    margin-bottom: 6px;
+.post-categories
   font-size 15px
   margin-top 30px
   margin-bottom 30px
@@ -281,7 +339,7 @@ form .row:first-child .floating-label-form-group
   @extend .sans-serif
   text-transform uppercase
   font-size 14px
-  font-weight 800
+  font-weight 700
   letter-spacing 1px
   border-radius 0
   padding 15px 25px

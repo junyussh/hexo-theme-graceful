@@ -1,12 +1,26 @@
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<!-- MathJax -->
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+        messageStyle: "none", // 載入 MathJax 檔案時不要顯示訊息
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} // 搜尋內文 $ 符號
+      });
+</script>
 
 <!-- Bootstrap -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- zoom-vanilla.js -->
+<script src="//cdn.jsdelivr.net/npm/zoom-vanilla.js/dist/zoom-vanilla.min.js" charset="utf-8">
+</script>
+<script type="text/javascript">
+var article = document.getElementsByTagName("article");
+var img = article[0].getElementsByTagName("img");
+var arr = Array.from(img);
+arr.map((obj) => {
+	obj.setAttribute("data-action", "zoom");
+});
+</script>
 
 <!-- Disqus Comments -->
 <% if (theme.comments && theme.comments.disqus_shortname){ %>

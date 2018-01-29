@@ -9,7 +9,15 @@
             </h3>
         <% } %>
     </a>
+    <div class="post-content-preview">
+        <%- item.excerpt %>
+    </div>
+
+    
     <p class="post-meta">
+    <a href="<%- config.root %><%- item.path %>" class="post-more-link">
+    Read More
+    </a>
         <!-- Date and Author -->
         <% if(item.author) { %>
             Posted by <%- item.author %> on

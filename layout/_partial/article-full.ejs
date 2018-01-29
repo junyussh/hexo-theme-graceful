@@ -8,6 +8,9 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
+                    <div class="tags">
+                        <%- partial('article-tags', {item: item}) %>
+                    </div>
                     <h1><%- item.title || theme.default_post_title || "Untitled" %></h1>
                     <% if (item.subtitle && item.subtitle.length) { %>
                     <h2 class="post-subheading">
@@ -34,6 +37,25 @@
     <div class="container">
         <div class="row">
 
+            <!-- Gallery -->
+            <% if (item.photos && item.photos.length){ %>
+                <%- partial('gallery') %>
+            <% } %>
+
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <%- item.content %>
+
+                <% if(theme.addthis) { %>
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%- theme.addthis %>"></script>
+
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <div class="addthis_sharing_toolbox"></div>
+                <% } %>
+            </div>
+
             <!-- Tags and categories -->
            <% if (item.categories && item.categories.length || item.tags && item.tags.length) { %>
                 <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
@@ -49,25 +71,7 @@
                     <% } %>
                 </div>
             <% } %>
-
-            <!-- Gallery -->
-            <% if (item.photos && item.photos.length){ %>
-                <%- partial('gallery') %>
-            <% } %>
-
-            <!-- Post Main Content -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <%- item.content %>
-
-                <% if(theme.addthis) { %>
-                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%- theme.addthis %>"></script>
-
-                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                    <div class="addthis_sharing_toolbox"></div>
-                <% } %>
-            </div>
-
+            
             <!-- Comments -->
             <% if (item.comment != false) { %>
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
